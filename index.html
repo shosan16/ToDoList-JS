@@ -4,30 +4,39 @@
 <head>
 	<title>TODO(JS)</title>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
-	<div>
+	<div class="input-area">
 		<input placeholder="To Doを入力"></input>
 		<button>追加</button>
 	</div>
-	<div>
-		<p>未完了のTODO</p>
+	<div class="incomplete-area">
+		<p class="title">未完了のTODO</p>
 		<ul>
-			<li>TODOです</li>
-			<button>完了</button>
-			<button>削除</button>
+			<div class="list-row">
+				<li>TODOです</li>
+				<button>完了</button>
+				<button>削除</button>
+			</div>
+			<div class="list-row">
+				<li>TODOです</li>
+				<button>完了</button>
+				<button>削除</button>
+			</div>
 		</ul>
 	</div>
-	<div>
-		<p>完了したTODO</p>
-		<ul>
-			<li>TODOです</li>
-			<button>戻す</button>
-		</ul>
+	<div class="complete-area">
+		<p class="title">完了したTODO</p>
+			<ul>
+				<div class="list-row">
+					<li>TODOです</li>
+					<button>戻す</button>
+				</div>
+			</ul>
 	</div>
-	<script src="src/index.js">
-	</script>
+	<script src="src/index.js"></script>
 </body>
 
 </html>
