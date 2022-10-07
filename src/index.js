@@ -8,8 +8,21 @@ const onClickAdd = () => {
   const li = document.createElement("li");
   li.innerHTML = inputText;
 
-  div.appendChild(li);
+  const completeButton = document.createElement("button");
+  completeButton.innerHTML = "完了";
+  completeButton.addEventListener("click", () => {
+    alert("完了");
+  });
 
+  const deleteButton = document.createElement("button");
+  deleteButton.innerHTML = "削除";
+  deleteButton.addEventListener("click", () => {
+    alert("削除");
+  });
+
+  div.appendChild(li);
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
   document.getElementById("incomplete-list").appendChild(div);
 };
 
