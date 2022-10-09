@@ -13,7 +13,17 @@ const onClickAdd = () => {
   completeButton.addEventListener("click", () => {
     deleteFromIncompleteList(completeButton.parentNode);
 
-    // document.getElementById("complete-list").appendChild(div);
+    addTarget = completeButton.parentNode;
+    const text = addTarget.firstElementChild.innerText;
+    addTarget.textContent = null;
+    const li = document.createElement("li");
+    li.innerText = text;
+
+    const backButton = document.createElement("button");
+    backButton.innerHTML = "戻す";
+    addTarget.appendChild(li);
+    addTarget.appendChild(backButton);
+    document.getElementById("complete-list").appendChild(addTarget);
   });
 
   const deleteButton = document.createElement("button");
@@ -21,10 +31,6 @@ const onClickAdd = () => {
   deleteButton.addEventListener("click", () => {
     deleteFromIncompleteList(deleteButton.parentNode);
   });
-
-  const backButton = document.createElement("button");
-  backButton.innerHTML = "戻す";
-
 
   div.appendChild(li);
   div.appendChild(completeButton);
