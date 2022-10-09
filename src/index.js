@@ -8,6 +8,7 @@ const onClickAdd = () => {
   const li = document.createElement("li");
   li.innerHTML = inputText;
 
+
   const completeButton = document.createElement("button");
   completeButton.innerHTML = "完了";
   completeButton.addEventListener("click", () => {
@@ -36,8 +37,10 @@ const onClickAdd = () => {
   div.appendChild(completeButton);
   div.appendChild(deleteButton);
 
+
   document.getElementById("incomplete-list").appendChild(div);
 };
+
 
 const deleteFromIncompleteList = (target) => {
   document.getElementById("incomplete-list").removeChild(target);
