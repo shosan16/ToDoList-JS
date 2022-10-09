@@ -11,19 +11,30 @@ const onClickAdd = () => {
   const completeButton = document.createElement("button");
   completeButton.innerHTML = "完了";
   completeButton.addEventListener("click", () => {
-    alert("完了");
+    deleteFromIncompleteList(completeButton.parentNode);
+
+    // document.getElementById("complete-list").appendChild(div);
   });
 
   const deleteButton = document.createElement("button");
   deleteButton.innerHTML = "削除";
   deleteButton.addEventListener("click", () => {
-    alert("削除");
+    deleteFromIncompleteList(deleteButton.parentNode);
   });
+
+  const backButton = document.createElement("button");
+  backButton.innerHTML = "戻す";
+
 
   div.appendChild(li);
   div.appendChild(completeButton);
   div.appendChild(deleteButton);
+
   document.getElementById("incomplete-list").appendChild(div);
+};
+
+const deleteFromIncompleteList = (target) => {
+  document.getElementById("incomplete-list").removeChild(target);
 };
 
 document
